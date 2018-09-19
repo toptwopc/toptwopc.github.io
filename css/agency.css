@@ -9,6 +9,10 @@ body {
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.navbar-form{
+    color:white;
+}
+
 .text-muted {
     color: #777;
 }
@@ -253,7 +257,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background-color: #444477e6;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -265,13 +269,17 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg2.jpg);
+    background-image: url(../img/header-bg3.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+img{
+ width:300px;
 }
 
 header .intro-text {
@@ -651,15 +659,9 @@ aside.clients img {
     margin: 50px auto;
 }
 
-section#contact {
-    background-color: #222;
-    background-image: url(../img/map-image.png);
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 section#contact .section-heading {
-    color: #fff;
+    color: #8e949c;
 }
 
 section#contact .form-group {

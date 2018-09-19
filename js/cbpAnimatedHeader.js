@@ -12,14 +12,15 @@ var cbpAnimatedHeader = (function() {
 
 	var docElem = document.documentElement,
 		header = document.querySelector( '.navbar-default' ),
+		topForm = document.querySelector('.navbar-form'),
 		didScroll = false,
-		changeHeaderOn = 300;
+		changeHeaderOn = 20;
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
 			if( !didScroll ) {
 				didScroll = true;
-				setTimeout( scrollPage, 250 );
+				setTimeout( scrollPage, 150 );
 			}
 		}, false );
 	}
@@ -28,9 +29,18 @@ var cbpAnimatedHeader = (function() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
 			classie.add( header, 'navbar-shrink' );
+			topForm.style.visibility="visible";
+			topForm.style.marginTop="0px";
+			document.body.getElementsByTagName("header")[0].style.visibility="hidden";
 		}
 		else {
 			classie.remove( header, 'navbar-shrink' );
+			topForm.style.visibility="hidden";
+			
+			topForm.style.marginTop="-300px";
+			document.body.getElementsByTagName("header")[0].style.visibility="visible";
+			
+
 		}
 		didScroll = false;
 	}
